@@ -1,0 +1,194 @@
+DAY 2 -- static block method and constructor 
+
+static block ===
+
+class Demo {
+    static {
+        System.out.println("Static Block");
+    }
+    Demo() {
+        System.out.println("Constructor");
+    }
+}
+public class q2 {
+    public static void main(String[] args){
+        Demo d1 = new Demo();
+        Demo d2 = new Demo();
+    }
+}
+//---using static keyword static block will be created and it is a singleton block
+//---Static method : for static method no need to create objects , static will act as instance or object and using class name , you can call static methods
+
+\\\--------------------------------------------------------------------------------------------------------------------------------------------------------------------\\\
+
+class Animal {
+    static void eat(){
+        System.out.println("ANimal is eating");
+    }
+}
+
+class Dog extends Animal {
+    static void eat(){
+        System.out.println("Dog is eating");
+    }
+}
+
+public class Main { 
+    public static void main(String[] args){
+        Animal.eat();
+        Dog.eat();
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------\\\
+CONSTRUCTOR : initialization of objects , calling default constructors to create objects 
+
+CONDITIONAL STATEMENTS : 
+it will take the condition and it will bring that block 
+types : if , else , else-if , SWITCH case 
+
+if (age < 18){
+    System.out.println();
+}
+else{
+
+}
+
+condoitional statements are used to get output in constant time 
+
+recursion : 
+public class HCFRecursion {
+    // Recursive function to find HCF
+    static int findHCF(int a, int b) {
+        if (b == 0)
+            return a;
+        else
+            return findHCF(b, a % b);
+    }
+
+    public static void main(String[] args) {
+        int num1 = 18, num2 = 12;
+        int hcf = findHCF(num1, num2);
+        System.out.println("HCF of " + num1 + " and " + num2 + " is: " + hcf);
+    }
+}
+\\\-----------------------------------------------------------------------------------------------------------------------------------------------------------------\\\
+EXAMPLE FOR SWITCH CASE : 
+
+public class SwitchExample {
+    public static void main(String[] args) {
+        int dayOfWeek = 3;
+        String dayName;
+        
+        switch (dayOfWeek) {
+            case 1:
+                dayName = "Monday";
+                break;
+            case 2:
+                dayName = "Tuesday";
+                break;
+            case 3:
+                dayName = "Wednesday";
+                break;
+            case 4:
+                dayName = "Thursday";
+                break;
+            case 5:
+                dayName = "Friday";
+                break;
+            case 6:
+                dayName = "Saturday";
+                break;
+            case 7:
+                dayName = "Sunday";
+                break;
+            default:
+                dayName = "Invalid day";
+                break;
+        }
+        
+        System.out.println("Day " + dayOfWeek + " is " + dayName);
+    }
+}
+\\\-----------------------------------------------------------------------------------------------------------------------------------------------------------------\\\
+CONTROL STATEMENTS : types : while , do while , for  
+
+Entry conrol and exit control 
+
+entry control : for and while 
+exit control : break , continue 
+
+for(start;end;difference){
+    }
+        |
+        |
+start
+while(end){
+    diff
+}
+when you know the range use for loop , if u dont know the range use while loop
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+code for nth table 
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args){
+        
+        int result = 0 ;
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        for(int i=1;i<=10;i++){
+            result = n * i;
+            System.out.println("The table of n is "+result);
+        }
+        
+        
+    }
+}
+
+FACTORIAL ::
+public class Main {
+    public static void main(String[] args) {
+        int number = 5; 
+        long factorial = 1;
+        
+        for(int i = 1; i <= number; i++) {
+            factorial = factorial * i;
+        }
+        
+        System.out.println(factorial);
+    }
+}
+
+Fibo series :: 
+public class Main {
+    public static void main(String[] args) {
+        int n = 10 ;
+        int firstnum = 0 ; 
+        int secondnum = 1 ;
+        
+        for(int i = 1; i <= n ; i++){
+            int nextnum = firstnum + secondnum;
+            firstnum = secondnum;
+            secondnum = nextnum ;
+            System.out.println(firstnum);
+        }
+    }
+}
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int firstnum = 0 ; 
+        int secondnum = 1 ;
+        
+        for(int i = 1; i <= n ; i++){
+            int nextnum = firstnum + secondnum;
+            firstnum = secondnum;
+            secondnum = nextnum ;
+            System.out.println(firstnum);
+        }
+    }
+}
